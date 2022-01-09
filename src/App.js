@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import 'react-traning-sample-api/styles.css';
 import { getPosts } from 'react-traning-sample-api';
 import './App.css';
+import { Skills } from './Components/Skills/skills';
 
 function App() {
 
@@ -20,6 +21,7 @@ function App() {
   }
 
   return <>
+  <Skills></Skills>
   </>
 }
 
