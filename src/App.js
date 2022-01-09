@@ -21,7 +21,7 @@ function App() {
   }
 
   return <>
-  <Skills></Skills>
+  <Skills/>
   </>
 }
 
