@@ -4,6 +4,7 @@ import { getPosts } from 'react-traning-sample-api';
 import './App.css';
 import { Skills } from './Components/Skills/skills';
 import Image from './Components/Info/image';
+import { Projects } from './Components/Projects/projects' ;
 
 function App() {
 
