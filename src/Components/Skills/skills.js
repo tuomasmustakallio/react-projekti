@@ -1,17 +1,24 @@
 import React from "react";
-import ProgressBar from 'react-bootstrap/ProgressBar'
-import 'bootstrap/dist/css/bootstrap.min.css';
+import { Skill } from "./skill";
+import './skills.css';
 
 export function Skills(props){
 
     //Hetkellisiä arvoja
-    const skillAmount = 60
-    const skillName = "JavaScript"
+    const testimaara = 60
+    const testinimi = "JavaScript"
 
     return (
-    <div className="skill">
-        <h3>{skillName}</h3>
-        <ProgressBar now={skillAmount} />
+    <div className="skills">
+        <>
+        <div class="Header"><h1>Ohjelmointitaidot</h1></div>
+        <div class="SecondHeader"><h2>Kielet</h2></div>
+        <div class="Skills">
+            <Skill
+            skillName={testinimi}
+            skillAmount={testimaara}/>
+        </div>
+        </>
     </div>
     );
 }
