@@ -3,6 +3,7 @@ import 'react-traning-sample-api/styles.css';
 import { getPosts } from 'react-traning-sample-api';
 import './App.css';
 import { Skills } from './Components/Skills/skills';
+import {Image} from './Components/Info/image';
 
 function App() {
 
@@ -22,6 +23,7 @@ function App() {
 
   return <>
   <Skills/>
+  <Image/>
   </>
 }
 
