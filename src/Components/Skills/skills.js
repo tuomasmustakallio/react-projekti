@@ -1,12 +1,17 @@
 import React from "react";
+import ProgressBar from 'react-bootstrap/ProgressBar'
 
-export function Skills(props){
+export function Skills(){
+
+    const now = 60;
+
+    const progressInstance = (
+    <ProgressBar now={now} label={`${now}%`} visuallyHidden />
+    );
 
     return (
-        <div className="posts-app">
-            <p>
-                Täällä on taidot
-            </p>
-        </div>
+    <div class="sidepanel">
+        <ProgressBar>{progressInstance}</ProgressBar>
+    </div>
     );
 }
