@@ -18,7 +18,7 @@ export function Skills(){
             skillName={testinimi}
             skillAmount={testimaara}/>
         </div>
-        <div class="Skills"><button onClick={addSkill}>Add a language</button></div>
+        <div class="Skills"><button >Add a language</button></div>
         <div class="SecondHeader"><h2>Other skills</h2></div>
         <div class="Skills">
             <Skill
