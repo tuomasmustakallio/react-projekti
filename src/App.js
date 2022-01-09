@@ -22,7 +22,7 @@ function App() {
   }
 
   return <>
-  <Skills/>
+  <div class="right"><Skills/></div>
   <Image/>
   </>
 }

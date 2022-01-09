@@ -36,3 +36,10 @@
     transform: rotate(360deg);
   }
 }
+
+.right{
+  width:25%;
+  float:right;
+  height:100vh;
+  background:lightblue;
+}
