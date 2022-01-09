@@ -23,7 +23,7 @@ export function Projects(props){
         </div>
         <div class="Button">
             <button onClick={clickButton}>
-                Button
+                Add project
             </button>
         </div>
         </>
