@@ -8,6 +8,10 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 In the project directory, you can run:
 
+### 'git clone https://github.com/tuomasmustakallio/react-projekti.git'
+
+### 'npm i create-traning-sample-api'
+
 ### `npm start`
 
 Runs the app in the development mode.\
