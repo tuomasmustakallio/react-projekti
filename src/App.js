@@ -3,7 +3,7 @@ import 'react-traning-sample-api/styles.css';
 import { getPosts } from 'react-traning-sample-api';
 import './App.css';
 import { Skills } from './Components/Skills/skills';
-import {Image} from './Components/Info/image';
+import Image from './Components/Info/image';
 import { Projects } from './Components/Projects/projects' ;
 
 function App() {
@@ -19,12 +19,12 @@ function App() {
   });
 
   if (loading) {
-    return <div className="posts-app">Ladataan</div>
+    return <div className="posts-app">Loading</div>
   }
 
   return <>
   <div class="right"><Skills/></div>
-  <Image/>
+  <div class="upleft"><Image/></div>
   </>
 }
 
