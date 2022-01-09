@@ -18,6 +18,7 @@ export function Skills(){
             skillName={testinimi}
             skillAmount={testimaara}/>
         </div>
+        {/*ideana että nappi avaa modalin johon voi lisätä kielen ja kuinka hyvin sen osaa*/}
         <div class="Skills"><button >Add a language</button></div>
         <div class="SecondHeader"><h2>Other skills</h2></div>
         <div class="Skills">
