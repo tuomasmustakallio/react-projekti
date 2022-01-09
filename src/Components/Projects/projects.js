@@ -1,13 +1,35 @@
 import React from "react";
+import { Project } from "./project";
+import './projects.css';
+
 
 export function Projects(props){
 
+    const testiprojekti = "Mobiilipeli";
+    const testiInfo = "FGJ 2021";
 
-    const projectName = "Mobiilipeli"
+    function clickButton(){
+        alert('Yahhuu!!!');
+    }
 
     return (
-    <div className="project">
-        <h3>{projectName}</h3>
+    <div className="projects">
+        <>
+        <div class="Header"><h1>Projects</h1></div>
+        <div class="Projects">
+            <Project
+            projectName={testiprojekti}
+            projectInfo={testiInfo}/>
+        </div>
+        <div class="Button">
+            <button onClick={clickButton}>
+                Button
+            </button>
+        </div>
+        </>
     </div>
+
     );
+
+
 }
