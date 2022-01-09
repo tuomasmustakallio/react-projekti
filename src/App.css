@@ -37,9 +37,15 @@
   }
 }
 
-.right{
-  width:25%;
-  float:right;
-  height:100vh;
-  background:lightblue;
+.right {
+  width: 25%;
+  float: right;
+  height: 100vh;
+  background: lightblue;
+}
+
+.image {
+  width: 30%;
+  float: left;
+  height: 100px;
 }

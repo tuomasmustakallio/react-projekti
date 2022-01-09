@@ -1,78 +1,24 @@
-import axios from 'axios';
+import React, { useState, useEffect } from 'react';
 
-import React,{Component} from 'react';
+export default function Image() {
+    const [images, setImages] = useState([]);
+    const [imageURLs, setImageURLs] = useState([]);
 
-class Image extends Component {
+    useEffect(() => {
+        if (images.length < 1) return;
+        const newImageUrls = [];
+        images.forEach(image => newImageUrls.push(URL.createObjectURL(image)));
+        setImageURLs(newImageUrls);
+    }, [images]);
 
-	state = {
+    function onImageChange(e) {
+        setImages([...e.target.files]);
+    }
 
-	 //Initially, no file selected
-	selectedFile: null
-	};
-	
-	// On file select
-	onFileChange = event => {
-
-	this.setState({ selectedFile: event.target.files[0] });
-	
-	};
-	
-	// On file upload
-	onFileUpload = () => {
-	
-	const formData = new FormData();
-	
-	formData.append(
-		"myFile",
-		this.state.selectedFile,
-		this.state.selectedFile.name
-	);
-	
-	console.log(this.state.selectedFile);
-	
-	axios.post("api/uploadfile", formData);
-	};
-	
-	// File content to be displayed after
-	// file upload is complete
-	fileData = () => {
-	
-	if (this.state.selectedFile) {
-		
-		return (
-		<div>
-			<h2>Press "upload" to upload picture</h2>
-		</div>
-		);
-	} else {
-		return (
-		<div>
-			<br />
-			<h4>Choose a picture before pressing "Upload"</h4>
-		</div>
-		);
-	}
-	};
-	
-	render() {
-	
-	return (
-		<div>
-			<h1>
-			Picture
-			</h1>
-			<div>
-				<input type="file" onChange={this.onFileChange} />
-				<button onClick={this.onFileUpload}>
-				Upload!
-				</button>
-			</div>
-		{this.fileData()}
-		</div>
-	);
-	}
+    return (
+        <>
+            <input type="file" multiple accept='image/*' onChange={onImageChange} />
+            { imageURLs.map(imageSrc => <img src={imageSrc} alt=''/>) }
+        </>
+    );
 }
-
-export default Image;
-
-
