@@ -1,25 +1,32 @@
-import logo from './logo.svg';
+import { useEffect, useState } from 'react';
+import 'react-traning-sample-api/styles.css';
+import { getPosts } from 'react-traning-sample-api';
 import './App.css';
 
+
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+  const [loading, setLoading] = useState(true)
+  const [posts, setPosts] = useState([])
+
+  useEffect(function () {
+
+    getPosts().then(function(res){
+      console.log(res);
+      setPosts(res);
+      setLoading(false);
+    });
+  });
+
+  if (loading) {
+    return <div className="posts-app">Ladataan</div>
+  }
+
+  return <div className="posts-app">
+    <ul calssName="post-list">
+      {posts.map(post => <li key={post.id}>{post.title}</li>)}
+    </ul>
+  </div>
 }
 
 export default App;
