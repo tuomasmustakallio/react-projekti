@@ -19,8 +19,8 @@ function App() {
     return <div className="posts-app">Ladataan</div>
   }
 
-  return <div >
-  </div>
+  return <>
+  </>
 }
 
 export default App;
