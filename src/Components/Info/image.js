@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import './image.css';
 
 export default function Image() {
     const [images, setImages] = useState([]);
@@ -17,8 +18,11 @@ export default function Image() {
 
     return (
         <>
-            <input type="file" multiple accept='image/*' onChange={onImageChange} />
-            { imageURLs.map(imageSrc => <img src={imageSrc} alt=''/>) }
+            <input class="file" type="file" multiple accept='image/*' onChange={onImageChange} />
+            { imageURLs.map(imageSrc => <img class="pic" src={imageSrc} alt='' width = "300" height = "350"/>) }
+            <input type="text" name="name"/>
+            <div class="sep"></div>
+            <input class="text" type="text" name="name" />
         </>
     );
 }
