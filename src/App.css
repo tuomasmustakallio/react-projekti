@@ -37,6 +37,19 @@
   }
 }
 
+<<<<<<< HEAD
+.right{
+  width:25%;
+  float:right;
+  height:100vh;
+  background:lightblue;
+}
+
+.bottomleft{
+  float:left;
+  float:bottom;
+}
+=======
 .right {
   width: 25%;
   float: right;
@@ -48,3 +61,4 @@
   width: 10%;
   float: up;
 }
+>>>>>>> dd96a8de4780b6ab87cd898ab6b3e7fcb32bcc8f
