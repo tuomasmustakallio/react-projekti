@@ -25,7 +25,7 @@ function App() {
   return <>
   <div class="right"><Skills/></div>
   <div class="upleft"><Image/></div>
-  <div><Projects/></div>
+  <div class="bottomleft"><Projects/></div>
   </>
 }
 
