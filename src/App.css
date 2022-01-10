@@ -45,7 +45,6 @@
 }
 
 .image {
-  width: 30%;
-  float: left;
-  height: 100px;
+  width: 10%;
+  float: up;
 }

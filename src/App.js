@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import 'react-traning-sample-api/styles.css';
 import { getPosts } from 'react-traning-sample-api';
 import './App.css';
