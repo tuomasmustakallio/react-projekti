@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { Skill } from "./skill";
 import './skills.css';
 import { Modal } from './Modal.js';
+import { Slider } from "./slider";
+import {MDCSlider} from '@material/slider';
 
 export function Skills(){
 
@@ -15,6 +17,7 @@ export function Skills(){
         setShowModal(false);
     }
 
+    
     return (
     <div className="skills">
         <>
@@ -31,6 +34,8 @@ export function Skills(){
                 <h3 class="Skill">Language:</h3>
                 <div class="Skill" ><input type="text"/></div>
                 <h3 class="Skill">How good are you at it?</h3>
+                <div class="Skill"><Slider/></div>
+                <div class="Skill"><button >Add skill</button></div>
             </Modal>
             <button onClick={() => {setShowModal(true)}}>Add a language</button>
         </div>
