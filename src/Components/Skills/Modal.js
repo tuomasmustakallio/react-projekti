@@ -1,4 +1,5 @@
 import './Modal.css';
+import React from 'react';
 
 export function Modal ({ handleClose, show, children }){
   const showHideClassName = show ? "modal display-block" : "modal display-none";
@@ -7,9 +8,9 @@ export function Modal ({ handleClose, show, children }){
     <div className={showHideClassName}>
       <section className="modal-main">
         {children}
-        <button type="button" onClick={handleClose}>
+        <div class="button"><button onClick={handleClose}>
           Close
-        </button>
+        </button></div>
       </section>
     </div>
   );

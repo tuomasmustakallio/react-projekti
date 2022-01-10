@@ -28,7 +28,9 @@ export function Skills(){
         {/*ideana että nappi avaa modalin johon voi lisätä kielen ja kuinka hyvin sen osaa*/}
         <div class="Skills">
             <Modal show={showModal} handleClose={hideModal}>
-                <p>Modal</p>
+                <h3 class="Skill">Language:</h3>
+                <div class="Skill" ><input type="text"/></div>
+                <h3 class="Skill">How good are you at it?</h3>
             </Modal>
             <button onClick={() => {setShowModal(true)}}>Add a language</button>
         </div>
