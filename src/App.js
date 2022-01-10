@@ -25,6 +25,7 @@ function App() {
   return <>
   <div class="right"><Skills/></div>
   <div class="image"><Image/></div>
+  <div><Projects/></div>
   </>
 }
 
