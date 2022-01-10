@@ -24,13 +24,8 @@ function App() {
 
   return <>
   <div class="right"><Skills/></div>
-<<<<<<< HEAD
   <div class="upleft"><Image/></div>
   <div class="bottomleft"><Projects/></div>
-=======
-  <div class="image"><Image/></div>
-  <div><Projects/></div>
->>>>>>> dd96a8de4780b6ab87cd898ab6b3e7fcb32bcc8f
   </>
 }
 
