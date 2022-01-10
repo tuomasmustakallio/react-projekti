@@ -37,14 +37,18 @@
   }
 }
 
-.right{
-  width:25%;
-  float:right;
-  height:100vh;
-  background:lightblue;
+.right {
+  width: 25%;
+  float: right;
+  height: 100vh;
+  background: lightblue;
 }
 
-.bottomleft{
-  float:left;
-  float:bottom;
+.upleft {
+  float: top;
+}
+
+.bottomleft {
+  float: left;
+  float: bottom;
 }
