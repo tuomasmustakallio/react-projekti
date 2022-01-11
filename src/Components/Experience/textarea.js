@@ -1,19 +1,18 @@
-import React, { Component } from "react";
+/*import React, { Component } from "react";
 
-class Form extends Component {
+class Textarea extends Component {
 
     constructor(props) {
         super(props)
 
         this.state = {
-            username: '',
-            comments: ''
+            expText: ''
         }
     }
 
     handleUsernameChange = (event) => {
         this.setState({
-            username: event.target.value
+            expText: event.target.value
         })
     }
 
@@ -43,4 +42,4 @@ class Form extends Component {
     }
 }
 
-export default Form;
+export default Form;*/

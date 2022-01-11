@@ -7,7 +7,6 @@ import Image from './Components/Info/image';
 import Text from './Components/Info/text';
 import { Projects } from './Components/Projects/projects' ;
 import { Experience } from './Components/Experience/experience';
-import Form from './Components/Experience/Form';
 
 function App() {
 
