@@ -4,6 +4,7 @@ import { getPosts } from 'react-traning-sample-api';
 import './App.css';
 import { Skills } from './Components/Skills/skills';
 import Image from './Components/Info/image';
+import Text from './Components/Info/text';
 import { Projects } from './Components/Projects/projects' ;
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
   return <>
   <div class="right"><Skills/></div>
   <div class="upleft"><Image/></div>
+  <div><Text/></div>
   <div class="bottomleft"><Projects/></div>
   </>
 }

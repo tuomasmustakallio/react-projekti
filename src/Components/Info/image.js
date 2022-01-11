@@ -19,10 +19,7 @@ export default function Image() {
     return (
         <>
             <input class="file" type="file" multiple accept='image/*' onChange={onImageChange} />
-            { imageURLs.map(imageSrc => <img class="pic" src={imageSrc} alt='' width = "300" height = "350"/>) }
-            <input type="text" name="name"/>
-            <div class="sep"></div>
-            <input class="text" type="text" name="name" />
+            { imageURLs.map(imageSrc => <img class="pic" src={imageSrc} alt='' width = "250" height = "300"/>) }
         </>
     );
 }
