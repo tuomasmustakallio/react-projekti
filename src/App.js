@@ -5,6 +5,8 @@ import './App.css';
 import { Skills } from './Components/Skills/skills';
 import Image from './Components/Info/image';
 import { Projects } from './Components/Projects/projects' ;
+import { Experience } from './Components/Experience/experience';
+import Form from './Components/Experience/Form';
 
 function App() {
 
@@ -26,6 +28,7 @@ function App() {
   <div class="right"><Skills/></div>
   <div class="upleft"><Image/></div>
   <div class="bottomleft"><Projects/></div>
+  <div class="bottomcenter"><Experience/></div>
   </>
 }
 

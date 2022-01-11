@@ -52,3 +52,9 @@
   float: left;
   float: bottom;
 }
+
+.bottomcenter {
+  position: fixed;
+  left: 35%;
+  bottom: 50%;
+}
