@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import './image.css';
 
 export default function Image() {
     const [images, setImages] = useState([]);
