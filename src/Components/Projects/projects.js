@@ -11,6 +11,13 @@ export function Projects(props){
     const testiInfo = "FGJ 2021";
     const [showModal, setShowModal] = useState(false);
 
+    const handleMouseEnter = e => {
+        e.target.style.background = "grey"
+    }
+    const handleMouseLeave = e => {
+    e.target.style.background = "darkgrey"
+    }
+
     function hideModal(){
         setShowModal(false);
     }
@@ -28,16 +35,19 @@ export function Projects(props){
             projectName={testiprojekti}
             projectInfo={testiInfo}/>
         </div>
-        <div class="Skills">
+        <div class="Project">
             <Modal show={showModal} handleClose={hideModal}>
-                <h3 class="Skill">Project:</h3>
-                <div class="Skill" ><input type="text"/></div>
-                <h3 class="Skill">What was the project like?</h3>
-                <div class="Skill" ><input type="text"/></div>
-                <div class="Skill"><button >Add project</button></div>
-                
+                <h3 class="Project">Project:</h3>
+                <div class="Project" ><input type="text"/></div>
+                <h3 class="Project">Description</h3>
+                <div class="Project" ><input type="text"/></div>
+                <div class="Project"><button >Add project</button></div>
             </Modal>
-            <button class="Button" onClick={() => {setShowModal(true)}}>Add  project</button>
+            <button  onMouseEnter={handleMouseEnter}onMouseLeave={handleMouseLeave} className="Button" onClick={() => {setShowModal(true) }}
+                
+            >
+                Add  project
+            </button >
         </div>
         </>
     </div>
