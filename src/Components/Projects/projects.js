@@ -28,6 +28,14 @@ export function Projects(props){
         setInputList([...inputList, {projectName: "", projectInfo: ""}]);
     }
 
+    const addProject =(name, info) =>{
+        return(
+            <Project
+                projectName={name}
+                projectInfo={info}/>
+        )
+    }
+
     const handleRemoveInput = index => {
         const list = [...inputList];
         list.splice(index, 1);
@@ -85,10 +93,10 @@ export function Projects(props){
                                 onClick={handleAddInput}
                             >Add project</button></div>
                         </Modal>
-                        <button  onMouseEnter={handleMouseEnter}onMouseLeave={handleMouseLeave} className="Button"
+                        {inputList.length !=1 &&<button  onMouseEnter={handleMouseEnter}onMouseLeave={handleMouseLeave} className="Button"
                             onClick={() => handleRemoveInput(i)}
                         >Delete project
-                        </button >
+                        </button >}
                         {inputList.length - 1 === i && <button  onMouseEnter={handleMouseEnter}onMouseLeave={handleMouseLeave} className="Button" onClick={() => {setShowModal(true) }} 
 
                         >Add  project</button >}
