@@ -26,7 +26,7 @@ function App() {
 
   return <>
   <div class="right"><Skills/></div>
-  <div class="upleft"><Image/></div>
+  <div><Image/></div>
   {/* <div><Text/></div> */}
   <div class="bottomleft"><Projects/></div>
   <div class="bottomcenter"><Experience/></div>

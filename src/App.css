@@ -44,17 +44,14 @@
   background: lightblue;
 }
 
-.upleft {
-  float: top;
-}
-
 .bottomleft {
+  padding-top: 20%;
   float: left;
   float: bottom;
 }
 
 .bottomcenter {
-  position: fixed;
+  position: absolute;
   left: 35%;
-  bottom: 50%;
+  bottom: 55%;
 }
