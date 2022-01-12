@@ -1,0 +1,32 @@
+.click:hover {
+  position: fixed;
+  background: rgb(0, 132, 255);
+}
+
+.bg {
+  position: absolute;
+  padding-left: 0px;
+  padding-right: 0px;
+  padding-top: 0px;
+  padding-bottom: 10px;
+  background: #8b9ca360;
+  width: 17%;
+  height: 30vh;
+}
+
+.btn {
+  position: absolute;
+  padding-left: 100px;
+  padding-right: 0px;
+  padding-top: 300px;
+  padding-bottom: 0px;
+  text-align: center;
+}
+
+.pic {
+  position: absolute;
+  padding-left: 35px;
+  padding-right: 50px;
+  padding-top: 15px;
+  padding-bottom: 0px;
+}

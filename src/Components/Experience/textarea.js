@@ -1,45 +1,39 @@
-/*import React, { Component } from "react";
+import React, { useState, Component, setState } from "react";
 
-class Textarea extends Component {
+class Textarea extends React.Component {
 
     constructor(props) {
-        super(props)
-
+        super(props);
         this.state = {
-            expText: ''
-        }
+            value: ''
+        };
+
+        this.handleChange = this.handleChange.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
     }
 
-    handleUsernameChange = (event) => {
-        this.setState({
-            expText: event.target.value
-        })
+    handleChange(event) {
+        this.setState({value: event.target.value});
     }
 
-    handleCommentsChange = (event) => {
-        this.setState({
-            comments: event.target.value
-        })
+    handleSubmit(event) {
+        alert('Something was submitted: ' + this.state.value);
+        event.preventDefault();
     }
+
 
     render() {
         return(
-            <form>
-                <div>
-                    <label>Username</label>
-                    <input 
-                    type='text' 
-                    value={this.state.username}
-                    onChange={this.handleUsernameChange}
-                    />
-                </div>
-                <div>
-                    <label>Comments</label>
-                    <textarea value={this.state.comments} onChange={this.handleCommentsChange}></textarea>
-                </div>
+            <form onSubmit={this.handleSubmit}>
+                <label>
+                    Text:
+                    <textarea value={this.state.value} onChange={this.handleChange} />
+                </label>
+                <input type="submit" value="Submit" />
+                <div>{this.state.value}</div>
             </form>
         )
     }
 }
 
-export default Form;*/
+export default Textarea;
