@@ -1,4 +1,4 @@
-import Form from "./textarea";
+import Textarea from "./textarea";
 import React from "react";
 import { useState } from "react";
 import { Modal } from '../Skills/Modal.js';
@@ -18,10 +18,10 @@ export function Experience(){
             <div class="Header"><h2>Working experience</h2></div>
             <div class="Skills">
                 <Modal show={showModal} handleClose={hideModal}>
-                    <h3>Work</h3>
-                    <input type="text"/><input/>
+                    <Textarea/>
                 </Modal>
             </div>
+            <div></div>
             <button onClick={() => {setShowModal(true)}}>Add working experience</button>
         </div>
     )
