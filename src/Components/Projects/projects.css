@@ -11,6 +11,8 @@
 .Projects{
     align-items: flex-start;
     justify-content: flex-start;
+    width: 500px;
+    top: 20%;
     padding-left: 15px;
     padding-right: 30px;
     padding-top: 10px;
