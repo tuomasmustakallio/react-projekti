@@ -12,7 +12,7 @@ export function Projects(props){
     const [showModal, setShowModal] = useState(false);
     
     const [inputList, setInputList] = useState([
-        {projectName: "YAHHUU", projectInfo: "WOHHUU"}
+        {projectName: "Example Project", projectInfo: "Example description"}
     ]);
 
     const handleChange = (e, index) => {
@@ -23,7 +23,6 @@ export function Projects(props){
 
         setInputList(list);
     }
-
     const handleAddInput = () => {
         setInputList([...inputList, {projectName: "", projectInfo: ""}]);
     }
@@ -57,11 +56,6 @@ export function Projects(props){
     return (
         <div className="projects">
             <div class="Header"><h1>Projects</h1></div>
-            <div class="Projects">
-                <Project
-                projectName={testiprojekti}
-                projectInfo={testiInfo}/>
-            </div>
             {inputList.map((item,i) => {
                 return(
                     <>
@@ -93,7 +87,13 @@ export function Projects(props){
                                 onClick={handleAddInput}
                             >Add project</button></div>
                         </Modal>
-                        {inputList.length !=1 &&<button  onMouseEnter={handleMouseEnter}onMouseLeave={handleMouseLeave} className="Button"
+                        <div class= "Projects">
+                            <Project
+                                projectName={item.projectName}
+                                projectInfo={item.projectInfo}
+                            />
+                        </div>
+                        {inputList.length !==1 &&<button  onMouseEnter={handleMouseEnter}onMouseLeave={handleMouseLeave} className="Button"
                             onClick={() => handleRemoveInput(i)}
                         >Delete project
                         </button >}
@@ -104,9 +104,6 @@ export function Projects(props){
                     </>             
                     );
                 })}
-                <pre>
-                {JSON.stringify(inputList, null, 2)}
-                </pre>
         </div>
 
     );
