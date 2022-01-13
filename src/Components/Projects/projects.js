@@ -4,7 +4,6 @@ import './projects.css';
 import {useState} from 'react'
 import { Modal } from '../Skills/Modal.js';
 import Button from '@mui/material/Button';
-import OutlinedInput from '@mui/material/OutlinedInput';
 import TextField from '@mui/material/TextField';
 import Box from '@mui/material/Box';
 
@@ -12,8 +11,6 @@ import Box from '@mui/material/Box';
 
 export function Projects(props){
 
-    const testiprojekti = "Mobiilipeli";
-    const testiInfo = "FGJ 2021";
     const [showModal, setShowModal] = useState(false);
     
     const [inputList, setInputList] = useState([
@@ -30,14 +27,6 @@ export function Projects(props){
     }
     const handleAddInput = () => {
         setInputList([...inputList, {projectName: "", projectInfo: ""}]);
-    }
-
-    const addProject =(name, info) =>{
-        return(
-            <Project
-                projectName={name}
-                projectInfo={info}/>
-        )
     }
 
     const handleRemoveInput = index => {
@@ -96,9 +85,8 @@ export function Projects(props){
                                     value={item.projectInfo}
                                     onChange={e => handleChange(e, i)}
                                 />
-                            
                             </div>
-                            <div class="Project"><Button disabled={item.projectName === ""}
+                            <div  class="Project"><Button disabled={item.projectName === ""}
                                 variant="contained"
                                 value="Add"
                                 onClick={handleAddInput}
@@ -106,16 +94,18 @@ export function Projects(props){
                             </Box>
                         </Modal>
                         {inputList.length -1 !== i && item.projectName.length !==0 &&
-                        <div class= "Projects">
-                            <Project 
-                                projectName={item.projectName}
-                                projectInfo={item.projectInfo}
-                            />
-                        </div>}
-                        {inputList.length !==1 && inputList.length -1 !== i && item.projectName.length !==0 &&<Button variant="contained" onMouseEnter={handleMouseEnter}onMouseLeave={handleMouseLeave} className="Button"
-                            onClick={() => handleRemoveInput(i)}
-                        >Delete project
-                        </Button >}
+                        <Box>
+                            <div class= "Projects" >
+                                <Project 
+                                    projectName={item.projectName}
+                                    projectInfo={item.projectInfo}
+                                />
+                                {inputList.length !==1 && inputList.length -1 !== i && item.projectName.length !==0 &&<Button color="error" variant="contained" onMouseEnter={handleMouseEnter}onMouseLeave={handleMouseLeave} className="Button"
+                                onClick={() => handleRemoveInput(i)}
+                                >Delete project
+                                </Button >}
+                            </div>
+                        </Box>}
                         {inputList.length - 1 === i && <Button variant="contained"  onMouseEnter={handleMouseEnter}onMouseLeave={handleMouseLeave} className="Button" onClick={() => {setShowModal(true) }} 
                         >Add  project</Button >}
                     </div>       
