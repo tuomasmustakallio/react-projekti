@@ -8,8 +8,6 @@ import Image from './Components/Info/image';
 import { Projects } from './Components/Projects/projects' ;
 import { Experience } from './Components/Experience/experience';
 import About from './Components/Info/About';
-import 'materialize-css/dist/css/materialize.min.css';
-import 'materialize-css/dist/js/materialize.min.js';
 import { Textarea } from './Components/Experience/textarea';
 
 function App() {
