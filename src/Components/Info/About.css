@@ -1,10 +1,39 @@
 .position {
   position: absolute;
-  height: 50%;
+  height: 42%;
   width: 50%;
-  top: 30px;
+  top: 14px;
   left: 20%;
-  right: 60%;
+  right: 20%;
   text-align: center;
 }
 
+.about {
+  position: absolute;
+  width: 100%;
+  top: 4%;
+  left: 12%;
+  text-align: center;
+}
+
+.about_text {
+  position: absolute;
+  width: 100%;
+  top: 18%;
+  left: 13%;
+  text-align: center;
+}
+.personal_header {
+  position: absolute;
+  width: 30%;
+  top: 4%;
+  left: 0%;
+  text-align: center;
+}
+.personal {
+  position: absolute;
+  width: 30%;
+  top: 20%;
+  left: 0%;
+  text-align: center;
+}

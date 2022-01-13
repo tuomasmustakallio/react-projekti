@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import "./About.css"
+import Box from '@mui/material/Box';
 import TextField from "@mui/material/TextField";
 import { Paper } from '@mui/material';
 
@@ -7,21 +8,33 @@ export default class About extends Component {
     render() {
         return (
             <Paper className='position' elevation={8}>
-                <div>
-                    <div>
+                <div >
+                    <div >
                         <h6>
-                            <strong>ABOUT ME</strong>
+                            <strong className='about' >ABOUT ME</strong>
                         </h6>
-                        <p>
-                            <TextField placeholder=''></TextField>
+                        <Box
+                        component="form"
+                        sx={{
+                          '& .MuiTextField-root': { m: 1, width: '73ch' },
+                        }}
+                        noValidate
+                        autoComplete="off">
+                        <p className="about_text">
+                            <TextField
+                            autoComplete="off"
+                            maxRows={12}
+                            multiline
+                            placeholder=''></TextField>
                         </p>
+                        </Box>
                     </div>
-                    <div>
+                    <div >
                         <h6>
-                            <strong>PERSONAL INFO</strong>
+                            <strong className="personal_header">PERSONAL INFO</strong>
                         </h6>
                         <div>
-                            <div>
+                            <div className='personal'>
                                 <p><strong>
                                     <TextField placeholder='Address'></TextField>
                                     </strong></p>
