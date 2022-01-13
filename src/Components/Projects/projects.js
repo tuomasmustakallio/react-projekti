@@ -94,16 +94,16 @@ export function Projects(props){
                             </Box>
                         </Modal>
                         {inputList.length -1 !== i && item.projectName.length !==0 &&
-                        <div class= "Projects">
+                        <div class= "Projects" >
                             <Project 
                                 projectName={item.projectName}
                                 projectInfo={item.projectInfo}
                             />
-                        </div>}
-                        {inputList.length !==1 && inputList.length -1 !== i && item.projectName.length !==0 &&<Button variant="contained" onMouseEnter={handleMouseEnter}onMouseLeave={handleMouseLeave} className="Button"
+                            {inputList.length !==1 && inputList.length -1 !== i && item.projectName.length !==0 &&<Button color="error" variant="contained" onMouseEnter={handleMouseEnter}onMouseLeave={handleMouseLeave} className="Button"
                             onClick={() => handleRemoveInput(i)}
-                        >Delete project
-                        </Button >}
+                            >Delete project
+                            </Button >}
+                        </div>}
                         {inputList.length - 1 === i && <Button variant="contained"  onMouseEnter={handleMouseEnter}onMouseLeave={handleMouseLeave} className="Button" onClick={() => {setShowModal(true) }} 
                         >Add  project</Button >}
                     </div>       
