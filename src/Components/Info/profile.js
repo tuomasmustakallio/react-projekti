@@ -1,5 +1,4 @@
 import React, { useState, useEffect, Component } from 'react';
-import Button from "@mui/material/Button";
 import "./profile.css";
 import { Paper } from '@mui/material';
 
@@ -32,9 +31,9 @@ export default function Profile(props) {
                 id="contained-button-file" 
                 multiple type="file"
                 style = {{display: 'none'}}/>
-                <div >
-                { imageURLs.map(imageSrc => <img className='pic' src={imageSrc} alt='' 
-                    width = "290" height = "290" />) }
+                <div className='pic'>
+                { imageURLs.map(imageSrc => <img src={imageSrc} alt='' 
+                     height = "290" />) }
                 </div>
                 </Paper>
             </label>
