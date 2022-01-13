@@ -53,5 +53,15 @@
 .bottomcenter {
   position: absolute;
   left: 35%;
-  bottom: 55%;
+  bottom: 1%;
+}
+
+.bg {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  background: lightblue;
+  width: 17%;
+  height: 300px;
+  border-style: solid;
 }

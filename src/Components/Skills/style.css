@@ -1,0 +1,74 @@
+.Header {
+  padding-top: 50px;
+  padding: 15px;
+  text-align: center;
+}
+
+.SecondHeader {
+  padding-top: 20px;
+  padding-left: 15px;
+}
+
+.Skills {
+  padding-left: 15px;
+  padding-right: 30px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.addLButton {
+  padding-left: 15px;
+}
+
+.DropDown {
+  padding-top: 20px;
+}
+
+.Skill {
+  padding-top: 5px;
+  padding-bottom: 10px;
+  width: 400px;
+}
+
+.InputSkill {
+    padding-top: 5px;
+    padding-right: 30px;
+    padding-bottom: 10px;
+}
+
+.Slider {
+    padding-left: 20px;
+    padding-right: 30px;
+}
+
+/*Modal*/
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.modal-main {
+  position: fixed;
+  background: white;
+  width: 25%;
+  height: auto;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.display-block {
+  display: block;
+}
+
+.display-none {
+  display: none;
+}
+.button {
+  float: right;
+  padding: 10px;
+}

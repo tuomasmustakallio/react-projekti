@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import styled from 'styled-components'
+// import Button from "@mui/material/Button";
 import "./image.css"
+import styled from 'styled-components'
 
 export default function Image(props) {
     const [images, setImages] = useState([]);
@@ -10,8 +11,6 @@ export default function Image(props) {
         background: "lightskyblue",
         color: 'black',
     });
-    
- 
 
     useEffect(() => {
         if (images.length < 1) return;
@@ -37,27 +36,23 @@ export default function Image(props) {
 
     return (
         <>
-        <div className='bg'>
-
-        </div>
-        <div className="btn"> 
-            <Button 
-            className="click"
-            onClick={handleClick} >
-                Upload image
-            </Button>
-        </div>
-        <form class="pic">
-            <input
-            onChange={handleChange}
-            onChange={onImageChange}
-            type="file" 
-            ref={hiddenFileInput}
-            multiple accept='image/*' 
-            style = {{display: 'none'}}/>
-            { imageURLs.map(imageSrc => <img src={imageSrc} alt='' 
-            width = "250" height = "250" />) }
-        </form>
+            <div> 
+                <Button className='btn'
+                    onClick={handleClick} >
+                    Upload image
+                </Button>
+            </div>
+            <form className="pic">
+                <input 
+                    onChange={handleChange}
+                    onChange={onImageChange}
+                    type="file" 
+                    ref={hiddenFileInput}
+                    multiple accept='image/*' 
+                    style = {{display: 'none'}}/>
+                    { imageURLs.map(imageSrc => <img src={imageSrc} alt='' 
+                    width = "250" height = "250" />) }
+             </form>
         </>
     );
 }

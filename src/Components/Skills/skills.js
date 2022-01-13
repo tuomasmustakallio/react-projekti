@@ -1,51 +1,173 @@
 import React, { useState } from "react";
 import { Skill } from "./skill";
-import './skills.css';
-import { Modal } from './Modal.js';
-import { Slider } from "./slider";
-import {MDCSlider} from '@material/slider';
+import "./style.css";
+import Button from "@mui/material/Button";
+import Box from "@mui/material/Box";
+import Slider from "@mui/material/Slider";
+import InputLabel from "@mui/material/InputLabel";
+import MenuItem from "@mui/material/MenuItem";
+import FormControl from "@mui/material/FormControl";
+import Select from "@mui/material/Select";
+import Collapse from "@mui/material/Collapse";
+import IconButton from "@mui/material/IconButton";
+import List from "@mui/material/List";
+import ListItem from "@mui/material/ListItem";
+import DeleteIcon from "@mui/icons-material/Delete";
+import { TransitionGroup } from "react-transition-group";
 
-export function Skills(){
+const languages = [
+  "Python",
+  "Java",
+  "JavaScript",
+  "Swift",
+  "C++",
+  "C#",
+  "Rust",
+  "HTML",
+  "CSS",
+  "C",
+  "Kotlin",
+];
 
-    //Hetkellisiä arvoja
-    const testimaara = 60
-    const testinimi = "JavaScript"
+function renderItem({ selected, handleRemoveLanguage }) {
+  return (
+    <ListItem
+      secondaryAction={
+        <IconButton
+          edge="end"
+          aria-label="delete"
+          title="Delete"
+          onClick={() => handleRemoveLanguage(selected)}
+        >
+          <DeleteIcon />
+        </IconButton>
+      }
+    >
+      <Skill skillName={selected.name} skillAmount={selected.value} />
+    </ListItem>
+  );
+}
 
-    const [showModal, setShowModal] = useState(false);
+export function Skills() {
+  //Hetkellisiä arvoja
+  let selected = { id: 1, name: "", value: 0 };
 
-    function hideModal(){
-        setShowModal(false);
+  const [show, setShow] = useState(false);
+
+  let valuetext;
+
+  const [language, setLanguage] = useState("");
+
+  const handleChange = (event) => {
+    setLanguage(event.target.value);
+  };
+
+  const [value, setValue] = useState(50);
+
+  const handleSliderChange = (event, newValue) => {
+    setValue(newValue);
+  };
+
+  const [selectedLanguages, setSelectedLanguages] = useState(
+    languages.slice(0, 0)
+  );
+
+  const handleAddLanguage = () => {
+    selected.value = value;
+    selected.name = language;
+    const nextHiddenItem = selected;
+    if (nextHiddenItem) {
+      setSelectedLanguages((prev) => [nextHiddenItem, ...prev]);
     }
+  };
 
-    
-    return (
-    <div className="skills">
-        <>
-        <div class="Header"><h1>Programming skills</h1></div>
-        <div class="SecondHeader"><h2>Languages</h2></div>
-        <div class="Skills">
-            <Skill
-            skillName={testinimi}
-            skillAmount={testimaara}/>
+  const handleRemoveLanguage = (selected) => {
+    setSelectedLanguages((prev) => [...prev.filter((i) => i !== selected)]);
+  };
+
+  return (
+    <div>
+      <>
+        <div class="Header">
+          <h1>Programming skills</h1>
         </div>
-        {/*ideana että nappi avaa modalin johon voi lisätä kielen ja kuinka hyvin sen osaa*/}
-        <div class="Skills">
-            <Modal show={showModal} handleClose={hideModal}>
-                <h3 class="Skill">Language:</h3>
-                <div class="Skill" ><input type="text"/></div>
-                <h3 class="Skill">How good are you at it?</h3>
-                <div class="Skill"><Slider/></div>
-                <div class="Skill"><button >Add skill</button></div>
-            </Modal>
-            <button onClick={() => {setShowModal(true)}}>Add a language</button>
+        <div class="SecondHeader">
+          <h2>Languages</h2>
         </div>
-        <div class="SecondHeader"><h2>Other skills</h2></div>
         <div class="Skills">
-            <Skill
-            skillName={testinimi}
-            skillAmount={testimaara}/>
+          <Box sx={{ mt: 1 }}>
+            <List>
+              <TransitionGroup>
+                {selectedLanguages.map((selected) => (
+                  <Collapse key={selected}>
+                    {renderItem({ selected, handleRemoveLanguage })}
+                  </Collapse>
+                ))}
+              </TransitionGroup>
+            </List>
+          </Box>
         </div>
-        </>
+        <div></div>
+        <div class="addLButton">
+          <>
+            <Button
+              variant="contained"
+              onClick={() => setShow((prev) => !prev)}
+            >
+              Add a language
+            </Button>
+            <div class="DropDown">
+            {show && (
+              <Box>
+                <Box component="span">
+                  <div class="InputSkill">
+                    <FormControl fullWidth>
+                      <InputLabel id="demo-simple-select-label">
+                        Coding Language
+                      </InputLabel>
+                      <Select
+                        labelId="demo-simple-select-label"
+                        id="demo-simple-select"
+                        value={language}
+                        label="Coding Language"
+                        onChange={handleChange}
+                      >
+                        {languages.map((language) => (
+                          <MenuItem key={language} value={language}>
+                            {language}
+                          </MenuItem>
+                        ))}
+                      </Select>
+                    </FormControl>
+                  </div>
+                  <h4 class="Skill">I am this good at it</h4>
+                  <div class="Slider">
+                    <Slider
+                      value={value}
+                      defaultValue={50}
+                      getAriaValueText={valuetext}
+                      valueLabelDisplay="auto"
+                      step={10}
+                      min={10}
+                      max={100}
+                      onChange={handleSliderChange}
+                    />
+                  </div>
+                  <div class="Skill">
+                    <Button variant="contained" disabled={language === ""} onClick={handleAddLanguage}>
+                      Add skill
+                    </Button>
+                  </div>
+                </Box>
+              </Box>
+            )}
+            </div>
+          </>
+        </div>
+        <div class="SecondHeader">
+          <h2>Other skills</h2>
+        </div>
+      </>
     </div>
-    );
+  );
 }
