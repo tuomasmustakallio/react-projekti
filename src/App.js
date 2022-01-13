@@ -5,10 +5,11 @@ import './App.css';
 import { Skills } from './Components/Skills/skills';
 import Profile from './Components/Info/profile';
 import { Projects } from './Components/Projects/projects' ;
-import { Experience } from './Components/Experience/experience';
+//import { Experience } from './Components/Experience/experience';
 import About from './Components/Info/About';
 import Text from './Components/Info/text';
-import { Textarea } from './Components/Experience/textarea';
+//import { Textarea } from './Components/Experience/textarea';
+import { Work } from './Components/fastfix/work';
 
 function App() {
 
@@ -32,7 +33,7 @@ function App() {
   <div><Profile/></div>
   <div><Text/></div>
   <div class="bottomleft"><Projects/></div>
-  <div class="bottomcenter"><Textarea/></div>
+  <div class="bottomcenter"><Work/></div>
   </>
   );
 }
