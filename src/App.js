@@ -6,7 +6,7 @@ import { Skills } from './Components/Skills/skills';
 import Image from './Components/Info/image';
 // import Text from './Components/Info/text';
 import { Projects } from './Components/Projects/projects' ;
-import { Experience } from './Components/Experience/experience';
+import { Textarea } from './Components/Experience/textarea';
 
 function App() {
 
@@ -29,7 +29,7 @@ function App() {
   <div><Image/></div>
   {/* <div><Text/></div> */}
   <div class="bottomleft"><Projects/></div>
-  <div class="bottomcenter"><Experience/></div>
+  <div class="bottomcenter"><Textarea/></div>
   </>
 }
 
