@@ -39,9 +39,12 @@
 
 .right {
   width: 25%;
-  float: right;
-  height: 100vh;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  min-height: 100%;
   background: lightblue;
+  overflow:auto
 }
 
 .bottomleft {
