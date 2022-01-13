@@ -4,6 +4,11 @@ import './projects.css';
 import {useState} from 'react'
 import { Modal } from '../Skills/Modal.js';
 import Button from '@mui/material/Button';
+import OutlinedInput from '@mui/material/OutlinedInput';
+import TextField from '@mui/material/TextField';
+import Box from '@mui/material/Box';
+
+
 
 export function Projects(props){
 
@@ -12,7 +17,7 @@ export function Projects(props){
     const [showModal, setShowModal] = useState(false);
     
     const [inputList, setInputList] = useState([
-        {projectName: "Example Project", projectInfo: "Example description"}
+        {projectName: "", projectInfo: ""}
     ]);
 
     const handleChange = (e, index) => {
@@ -61,9 +66,18 @@ export function Projects(props){
                     <>
                     <div class="Project">
                         <Modal show={showModal} handleClose={hideModal}>
+                            <Box
+                                component="form"
+                                heigth
+                                sx={{
+                                    '& > :not(style)': { m: 1, width: '50ch' },
+                                }}
+                                noValidate
+                                autoComplete="off"
+                            >
                             <h3 class="Project">Project:</h3>
                             <div key={i}  class="Project" >
-                                <input
+                                <TextField fullWidth label="Project Name" id="fullWidth"
                                     type="text"
                                     name= "projectName"
                                     placeholder= "Project Name"
@@ -74,19 +88,22 @@ export function Projects(props){
                             </div>
                             <h3 class="Project">Description</h3>
                             <div class="Project" >
-                                <input
+                                <TextField fullWidth label="Description" id="fullWidth" maxRows={12} 
+                                    multiline
                                     type="text"
                                     name= "projectInfo"
                                     placeholder= "Description"
                                     value={item.projectInfo}
                                     onChange={e => handleChange(e, i)}
                                 />
+                            
                             </div>
-                            <div class="Project"><Button
+                            <div class="Project"><Button disabled={item.projectName === ""}
                                 variant="contained"
                                 value="Add"
                                 onClick={handleAddInput}
                             >Add project</Button></div>
+                            </Box>
                         </Modal>
                         {inputList.length -1 !== i && item.projectName.length !==0 &&
                         <div class= "Projects">
