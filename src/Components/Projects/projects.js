@@ -3,7 +3,7 @@ import { Project } from "./project";
 import './projects.css';
 import {useState} from 'react'
 import { Modal } from '../Skills/Modal.js';
-
+import Button from '@mui/material/Button';
 
 export function Projects(props){
 
@@ -42,10 +42,10 @@ export function Projects(props){
     }
 
     const handleMouseEnter = e => {
-        e.target.style.background = "grey"
+        e.target.style.background = "ligthblue"
     }
     const handleMouseLeave = e => {
-    e.target.style.background = "darkgrey"
+    e.target.style.background = "ligthblue"
     }
 
     function hideModal(){
@@ -82,24 +82,25 @@ export function Projects(props){
                                     onChange={e => handleChange(e, i)}
                                 />
                             </div>
-                            <div class="Project"><button
+                            <div class="Project"><Button
+                                variant="contained"
                                 value="Add"
                                 onClick={handleAddInput}
-                            >Add project</button></div>
+                            >Add project</Button></div>
                         </Modal>
+                        {inputList.length -1 !== i && item.projectName.length !==0 &&
                         <div class= "Projects">
-                            <Project
+                            <Project 
                                 projectName={item.projectName}
                                 projectInfo={item.projectInfo}
                             />
-                        </div>
-                        {inputList.length !==1 &&<button  onMouseEnter={handleMouseEnter}onMouseLeave={handleMouseLeave} className="Button"
+                        </div>}
+                        {inputList.length !==1 && inputList.length -1 !== i && item.projectName.length !==0 &&<Button variant="contained" onMouseEnter={handleMouseEnter}onMouseLeave={handleMouseLeave} className="Button"
                             onClick={() => handleRemoveInput(i)}
                         >Delete project
-                        </button >}
-                        {inputList.length - 1 === i && <button  onMouseEnter={handleMouseEnter}onMouseLeave={handleMouseLeave} className="Button" onClick={() => {setShowModal(true) }} 
-
-                        >Add  project</button >}
+                        </Button >}
+                        {inputList.length - 1 === i && <Button variant="contained"  onMouseEnter={handleMouseEnter}onMouseLeave={handleMouseLeave} className="Button" onClick={() => {setShowModal(true) }} 
+                        >Add  project</Button >}
                     </div>       
                     </>             
                     );
