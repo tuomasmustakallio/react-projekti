@@ -45,13 +45,15 @@
 }
 
 .bottomleft {
-  padding-top: 20%;
+  position: absolute;
+  top: 55%;
   float: left;
   float: bottom;
 }
 
 .bottomcenter {
   position: absolute;
+  top: 55%;
   left: 35%;
   bottom: 1%;
 }

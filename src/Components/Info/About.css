@@ -1,7 +1,10 @@
 .position {
   position: absolute;
-  width: 20%;
-  top: 8px;
+  height: 50%;
+  width: 50%;
+  top: 30px;
+  left: 20%;
   right: 60%;
   text-align: center;
 }
+

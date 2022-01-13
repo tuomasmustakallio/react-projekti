@@ -3,13 +3,11 @@ import 'react-traning-sample-api/styles.css';
 import { getPosts } from 'react-traning-sample-api';
 import './App.css';
 import { Skills } from './Components/Skills/skills';
-import Image from './Components/Info/image';
-// import Text from './Components/Info/text';
+import Profile from './Components/Info/profile';
 import { Projects } from './Components/Projects/projects' ;
 import { Experience } from './Components/Experience/experience';
 import About from './Components/Info/About';
-import 'materialize-css/dist/css/materialize.min.css';
-import 'materialize-css/dist/js/materialize.min.js';
+import Text from './Components/Info/text';
 import { Textarea } from './Components/Experience/textarea';
 
 function App() {
@@ -30,9 +28,9 @@ function App() {
 
   return (<>
   <div class="right"><Skills/></div>
-  <div className='bg'><Image/></div>
   <div><About/></div>
-  {/* <div><Text/></div> */}
+  <div><Profile/></div>
+  <div><Text/></div>
   <div class="bottomleft"><Projects/></div>
   <div class="bottomcenter"><Textarea/></div>
   </>

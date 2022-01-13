@@ -1,39 +1,41 @@
 import React, { Component } from 'react';
 import "./About.css"
+import TextField from "@mui/material/TextField";
+import { Paper } from '@mui/material';
 
 export default class About extends Component {
     render() {
         return (
-            <div className='position'>
-                <div className='card'>
-                    <div className='card-content'>
-                        <h6 className='mt-bottom'>
+            <Paper className='position' elevation={8}>
+                <div>
+                    <div>
+                        <h6>
                             <strong>ABOUT ME</strong>
                         </h6>
-                        <p className='grey-text'>
-                            <input type="text"></input>
+                        <p>
+                            <TextField placeholder=''></TextField>
                         </p>
                     </div>
-                    <div className='card-action'>
+                    <div>
                         <h6>
                             <strong>PERSONAL INFO</strong>
                         </h6>
-                        <div className='row mt'>
-                            <div className='col s12 m6 l6 xl6'>
+                        <div>
+                            <div>
                                 <p><strong>
-                                    Address: <input type="text"></input>
+                                    <TextField placeholder='Address'></TextField>
                                     </strong></p>
                                 <p><strong>
-                                    Email: <input type="text"></input>
+                                    <TextField placeholder='Email'></TextField>
                                     </strong></p>
                                 <p><strong>
-                                    Phone: <input type="text"></input>
+                                    <TextField placeholder='Phone'></TextField>
                                     </strong></p>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
+            </Paper>
         );
     }
 }
