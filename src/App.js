@@ -24,13 +24,14 @@ function App() {
     return <div className="posts-app">Loading</div>
   }
 
-  return <>
+  return (<>
   <div class="right"><Skills/></div>
   <div><Image/></div>
   {/* <div><Text/></div> */}
   <div class="bottomleft"><Projects/></div>
   <div class="bottomcenter"><Experience/></div>
   </>
+  );
 }
 
 export default App;

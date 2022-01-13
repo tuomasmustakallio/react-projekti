@@ -61,5 +61,3 @@ export default function Image(props) {
         </>
     );
 }
-
-/*width = "275" height = "300"*/
