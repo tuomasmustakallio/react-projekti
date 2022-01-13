@@ -10,6 +10,7 @@ import { Experience } from './Components/Experience/experience';
 import About from './Components/Info/About';
 import 'materialize-css/dist/css/materialize.min.css';
 import 'materialize-css/dist/js/materialize.min.js';
+import { Textarea } from './Components/Experience/textarea';
 
 function App() {
 
@@ -33,7 +34,7 @@ function App() {
   <div><About/></div>
   {/* <div><Text/></div> */}
   <div class="bottomleft"><Projects/></div>
-  <div class="bottomcenter"><Experience/></div>
+  <div class="bottomcenter"><Textarea/></div>
   </>
   );
 }
