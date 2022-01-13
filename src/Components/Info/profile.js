@@ -33,9 +33,11 @@ export default function Profile(props) {
                 style = {{display: 'none'}}/>
                 <div className='pic'>
                 { imageURLs.map(imageSrc => <img src={imageSrc} alt='' 
-                     height = "290" />) }
+                     height = "309" width="310" />) }
                 </div>
-                Click To Add Image
+                <div className='text'>
+                    Click To Add Image
+                </div>
                 </Paper>
             </label>
         </div>
