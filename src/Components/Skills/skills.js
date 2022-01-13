@@ -29,6 +29,15 @@ const languages = [
   "Kotlin",
 ];
 
+const other = [
+  "React",
+  "Android Apps",
+  "iOS Apps",
+  "Server management",
+  "SQL",
+  "Version Control",
+];
+
 function renderItem({ selected, handleRemoveLanguage }) {
   return (
     <ListItem
@@ -75,7 +84,7 @@ export function Skills() {
   const handleAddLanguage = () => {
     selected.value = value;
     selected.name = language;
-    const nextHiddenItem = selected;
+    let nextHiddenItem = selected;
     if (nextHiddenItem) {
       setSelectedLanguages((prev) => [nextHiddenItem, ...prev]);
     }
@@ -99,7 +108,7 @@ export function Skills() {
             <List>
               <TransitionGroup>
                 {selectedLanguages.map((selected) => (
-                  <Collapse key={selected}>
+                  <Collapse id={selected}>
                     {renderItem({ selected, handleRemoveLanguage })}
                   </Collapse>
                 ))}
@@ -107,7 +116,6 @@ export function Skills() {
             </List>
           </Box>
         </div>
-        <div></div>
         <div class="addLButton">
           <>
             <Button
