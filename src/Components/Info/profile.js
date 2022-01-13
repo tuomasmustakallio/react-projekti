@@ -35,6 +35,7 @@ export default function Profile(props) {
                 { imageURLs.map(imageSrc => <img src={imageSrc} alt='' 
                      height = "290" />) }
                 </div>
+                Click To Add Image
                 </Paper>
             </label>
         </div>
