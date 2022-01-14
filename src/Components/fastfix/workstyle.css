@@ -4,5 +4,14 @@
 }
 
 .bg {
-    color: lightgray;
+    color: gray;
+    
+}
+
+.Nyt {
+    width: 200%;
+}
+
+.h {
+    padding-bottom: 20px;
 }
