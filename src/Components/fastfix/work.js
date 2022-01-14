@@ -65,8 +65,8 @@ export function Work() {
   };
   
   return (
-    <div>
-        <Box>
+    <div class="Nyt">
+      <h2 class="h">Work Experience</h2>
             <TextField
             fullWidth
              label="Job Title" variant="outlined"
@@ -83,7 +83,6 @@ export function Work() {
             Add Work Experience
             </Button>
             </div>
-        </Box>
         <Box sx={{ mt: 1}}>
             <List>
             <TransitionGroup>
